@@ -26,6 +26,16 @@
                 Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
             }
             #endregion
+
+            #region Question02: list of only the product names
+            var productNames = ProductList
+                               .Select(p => p.ProductName);
+
+            foreach (var name in productNames)
+            {
+                Console.WriteLine(name);
+            }
+            #endregion
         }
     }
 }
