@@ -182,6 +182,24 @@
             #endregion
 
 
+            #region Question13: Create a list of all digits in the array
+            string[] digits =
+            {
+                "zero","one","two","three","four",
+                "five","six","seven","eight","nine"
+            };
+
+
+            var rresult = digits
+                        .Where(d => d.Length > 1 && d[1] == 'i')
+                        .Reverse();
+
+            foreach (var item in rresult)
+            {
+                Console.WriteLine(item);
+            }
+            #endregion
+
         }
     }
 }
