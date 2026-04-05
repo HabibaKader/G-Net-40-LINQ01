@@ -140,6 +140,25 @@
                 }
             };
             #endregion
+
+            #region Query of Question10
+            var result =
+                from c in Customers
+                from o in c.Orders   
+                where o.OrderDate.Year >= 1997
+                select new
+                {
+                    c.CustomerID,
+                    o.OrderDate
+                };
+
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item.CustomerID} - {item.OrderDate}");
+            }
+            #endregion
+
+            
         }
     }
 }
