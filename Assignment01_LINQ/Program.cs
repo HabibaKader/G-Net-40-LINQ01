@@ -56,6 +56,16 @@
                 Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
             }
             #endregion
+
+            #region Question05: all products that are in stock and belong to the "Condiments" category
+            var condimentsInStock = ProductList
+                                    .Where(p => p.Category == "Condiments" && p.UnitsInStock > 0);
+
+            foreach (var p in condimentsInStock)
+            {
+                Console.WriteLine($"{p.ProductName} - Stock: {p.UnitsInStock}");
+            }
+            #endregion
         }
     }
 }
