@@ -36,6 +36,16 @@
                 Console.WriteLine(name);
             }
             #endregion
+
+            #region Question03: Sort all products by UnitPrice
+            var sortedProducts = ProductList
+                                .OrderBy(p => p.UnitPrice);
+
+            foreach (var p in sortedProducts)
+            {
+                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            }
+            #endregion
         }
     }
 }
