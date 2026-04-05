@@ -17,7 +17,15 @@
         #endregion
         static void Main(string[] args)
         {
+            #region Question01: products from the "Seafood" category
+            var seafoodProducts = ProductList
+                                .Where(p => p.Category == "Seafood");
 
+            foreach (var p in seafoodProducts)
+            {
+                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            }
+            #endregion
         }
     }
 }
