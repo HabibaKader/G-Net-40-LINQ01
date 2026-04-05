@@ -117,6 +117,29 @@
                 Console.WriteLine($"{p.ProductName} - Stock: {p.UnitsInStock}");
             }
             #endregion
+
+            #region Question10: list all orders
+            var Customers = new[]
+{
+                new
+                {
+                    CustomerID = "1234",
+                    Orders = new List<Order>
+                    {
+                        new Order { OrderID = 1, CustomerID = "1234", OrderDate = new DateTime(1996, 5, 1) },
+                        new Order { OrderID = 2, CustomerID = "1234", OrderDate = new DateTime(1998, 3, 15) }
+                    }
+                },
+                new
+                {
+                    CustomerID = "5678",
+                    Orders = new List<Order>
+                    {
+                        new Order { OrderID = 3, CustomerID = "5678", OrderDate = new DateTime(1997, 7, 10) }
+                    }
+                }
+            };
+            #endregion
         }
     }
 }
