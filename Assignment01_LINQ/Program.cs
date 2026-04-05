@@ -81,6 +81,20 @@
                 Console.WriteLine($"{item.Name} - {item.Price} - {item.StockStatus}");
             }
             #endregion
+
+            #region Question07: product's name along with its position
+            var indexedProducts = ProductList
+                                .Select((p, index) => new
+                                {
+                                    Position = index + 1,
+                                    Name = p.ProductName
+                                });
+
+            foreach (var item in indexedProducts)
+            {
+                Console.WriteLine($"{item.Position}. {item.Name}");
+            }
+            #endregion
         }
     }
 }
