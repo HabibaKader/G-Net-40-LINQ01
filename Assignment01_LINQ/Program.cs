@@ -95,6 +95,17 @@
                 Console.WriteLine($"{item.Position}. {item.Name}");
             }
             #endregion
+
+            #region Question08: Sort ProductList by Category ascending
+            var SortedProducts = ProductList
+                                .OrderBy(p => p.Category)
+                                .ThenByDescending(p => p.UnitPrice);
+
+            foreach (var p in SortedProducts)
+            {
+                Console.WriteLine($"{p.Category} - {p.ProductName} - {p.UnitPrice}");
+            }
+            #endregion
         }
     }
 }
