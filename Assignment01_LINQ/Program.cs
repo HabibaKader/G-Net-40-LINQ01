@@ -158,7 +158,17 @@
             }
             #endregion
 
-            
+            #region Question11: Show position number alongside ProductName
+            var res = ProductList
+                        .Select((p, i) => $"{i + 1}. {p.ProductName}");
+
+            foreach (var item in res)
+            {
+                Console.WriteLine(item);
+            }
+            #endregion
+
+
         }
     }
 }
